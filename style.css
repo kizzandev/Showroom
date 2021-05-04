@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #eee;
+  overflow: hidden;
+}
+body {
+  background-color: #0c0c0c;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+h1 {
+  font-size: 42px;
+}
+.text {
+  font-size: 32px;
+}
+.h1L {
+  top: 3%;
+  left: 2%;
+}
+a {
+  top: 14%;
+  left: 4%;
+  color: lightskyblue;
+}
+a:hover {
+  color: steelblue;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+  }
+
