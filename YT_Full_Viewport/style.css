@@ -84,11 +84,11 @@ iframe,
 
 .back {
   position: absolute;
-  left: 1%;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   height: 90vh;
-  width: 80px;
+  width: 100px;
   align-items: center;
   justify-content: center;
   text-decoration: none;
