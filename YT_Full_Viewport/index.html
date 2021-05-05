@@ -36,7 +36,7 @@
       id="iframe"
     ></iframe>
 
-    <a href="" class="back" id="back">
+    <a href="" class="back" id="back" onclick="document.title = 'Youtube Full Browser Viewport';">
       <p><</p>
     </a>
 
@@ -48,6 +48,7 @@
           document.getElementById("urlLink").value.substring(32) +
           "?autoplay=1&modestbranding=1&iv_load_policy=3&showinfo=0&rel=0";
         document.getElementById("back").style.zIndex = "1";
+        document.title = "Playing video";
       }
     </script>
   </body>
