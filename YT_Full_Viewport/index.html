@@ -8,47 +8,64 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bg">
-      <div class="middle">
-        <h1>Insert YouTube link:</h1>
-
-        <div class="input">
-          <input
-            type="url"
-            name="Youtube link"
-            placeholder="https://www.youtube.com/watch?v=     ||     or drag it in"
-            id="urlLink"
-            pattern="https://www.youtube.com/watch?v="
-            onsubmit="loadVid()"
-          />
-          <br /><br />
-          <input type="button" id="btn" value="Play video" onClick="loadVid()" />
-        </div>
-      </div>
+    <form>
+      <input type="url" id="urlLink" oninput="main()" />
+    </form>
+    <div class="center">
+      <h1>Full Viewport YouTube Videos</h1>
+      <h3>
+        ctrl+C&nbsp;&nbsp;
+        https://www.youtube.com/watch?v=&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;
+        or drag it in
+      </h3>
     </div>
 
-    <iframe
-      src="#"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      id="iframe"
-    ></iframe>
-
-    <a href="" class="back" id="back" onclick="document.title = 'Youtube Full Browser Viewport';">
-      <p><</p>
+    <a
+      href="https://nivekizzan.github.io/Webs/YT_Full_Viewport/index.html"
+      id="back"
+      rel="noopener noreferrer"
+    >
+      <h1>&#60;</h1>
     </a>
 
-    <script>
-      function loadVid() {
-        document.getElementById("iframe").style.zIndex = "1";
-        document.getElementById("iframe").src =
+    <script type="text/javascript">
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function createIframe() {
+        var iframe = document.createElement("iframe");
+        var goBack = document.getElementById("back");
+        goBack.parentNode.insertBefore(iframe, goBack);
+        iframe.style.zIndex = "2";
+        iframe.style.display = "block";
+        iframe.setAttribute("id", "iframe");
+        iframe.classList.add("center");
+        goBack.style.zIndex = "5";
+      }
+
+      function loadVideo() {
+        var getLink = document.getElementById("urlLink").value.substring(32);
+        for (let i = 0; i < getLink.length - 1; i++) {
+          if (getLink[i] === "&") {
+            getLink = getLink.substring(0, i);
+            i = getLink.length;
+          }
+        }
+        var createLink =
           "https://www.youtube.com/embed/" +
-          document.getElementById("urlLink").value.substring(32) +
-          "?autoplay=1&modestbranding=1&iv_load_policy=3&showinfo=0&rel=0";
-        document.getElementById("back").style.zIndex = "1";
+          getLink +
+          "?modestbranding=1&showinfo=0&rel=0&autoplay=1&&iv_load_policy=3";
+        var iframe = document.getElementById("iframe");
+        iframe.src = createLink;
         document.title = "Playing video";
+      }
+
+      function main() {
+        createIframe();
+        sleep(100).then(() => {
+          loadVideo();
+        });
       }
     </script>
   </body>
