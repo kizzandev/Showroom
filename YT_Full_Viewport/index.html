@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
-      <input type="url" id="urlLink" oninput="main()" />
-    </form>
+    <input type="url" id="urlLink" oninput="main()" />
+
     <div class="center">
       <h1>Full Viewport YouTube Videos</h1>
       <h3>
@@ -37,20 +36,18 @@
         var iframe = document.createElement("iframe");
         var goBack = document.getElementById("back");
         goBack.parentNode.insertBefore(iframe, goBack);
-        iframe.style.zIndex = "2";
+        iframe.style.zIndex = "20";
         iframe.style.display = "block";
         iframe.setAttribute("id", "iframe");
         iframe.classList.add("center");
-        goBack.style.zIndex = "5";
+        goBack.style.zIndex = "30";
       }
 
       function loadVideo() {
         var getLink = document.getElementById("urlLink").value.substring(32);
-        for (let i = 0; i < getLink.length - 1; i++) {
-          if (getLink[i] === "&") {
-            getLink = getLink.substring(0, i);
-            i = getLink.length;
-          }
+        var a = getLink.indexOf("&");
+        if (a > 1) {
+          getLink = getLink.substring(0, a);
         }
         var createLink =
           "https://www.youtube.com/embed/" +

@@ -54,7 +54,7 @@ a:hover > h1 {
   visibility: visible;
 }
 #urlLink {
-  z-index: 2;
+  z-index: 10;
   background: transparent;
   position: fixed;
   top: 0;
