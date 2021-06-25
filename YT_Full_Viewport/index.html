@@ -13,7 +13,7 @@
     <div class="center">
       <h1>Full Viewport YouTube Videos</h1>
       <h3>
-        ctrl+C&nbsp;&nbsp;
+        ctrl+V&nbsp;&nbsp;
         https://www.youtube.com/watch?v=&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;
         or drag it in
       </h3>
@@ -52,16 +52,23 @@
         var createLink =
           "https://www.youtube.com/embed/" +
           getLink +
-          "?modestbranding=1&showinfo=0&rel=0&autoplay=1&&iv_load_policy=3";
+          "?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3";
         var iframe = document.getElementById("iframe");
         iframe.src = createLink;
         document.title = "Playing video";
+      }
+
+      function focusIF() {
+        document.getElementById("iframe").focus();
       }
 
       function main() {
         createIframe();
         sleep(100).then(() => {
           loadVideo();
+        });
+        sleep(250).then(() => {
+          focusIF();
         });
       }
     </script>
