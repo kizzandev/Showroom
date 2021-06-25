@@ -1,76 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youtube Full Browser Viewport</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <input type="url" id="urlLink" oninput="main()" />
 
-    <div class="center">
-      <h1>Full Viewport YouTube Videos</h1>
-      <h3>
-        ctrl+V&nbsp;&nbsp;
-        https://www.youtube.com/watch?v=&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;
-        or drag it in
-      </h3>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youtube Full Browser Viewport</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <a
-      href="https://nivekizzan.github.io/Webs/YT_Full_Viewport/index.html"
-      id="back"
-      rel="noopener noreferrer"
-    >
-      <h1>&#60;</h1>
-    </a>
+<body>
+  <input type="url" id="urlLink" oninput="main()" />
 
-    <script type="text/javascript">
-      function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
+  <div class="center">
+    <h1>Full Viewport YouTube Videos</h1>
+    <h3>
+      ctrl+V&nbsp;&nbsp;
+      https://www.youtube.com/watch?v=&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;
+      or drag it in
+    </h3>
+  </div>
+
+  <a href="https://nivekizzan.github.io/Webs/YT_Full_Viewport/index.html" id="back" rel="noopener noreferrer">
+    <h1>&#60;</h1>
+  </a>
+
+  <script type="text/javascript">
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    function createIframe() {
+      var iframe = document.createElement("iframe");
+      var goBack = document.getElementById("back");
+      goBack.parentNode.insertBefore(iframe, goBack);
+      iframe.style.zIndex = "20";
+      iframe.style.display = "block";
+      iframe.setAttribute("id", "iframe");
+      iframe.classList.add("center");
+      goBack.style.zIndex = "30";
+      iframe.setAttribute("allowfullscreen", '');
+    }
+
+    function loadVideo() {
+      var getLink = document.getElementById("urlLink").value.substring(32);
+      var a = getLink.indexOf("&");
+      if (a > 1) {
+        getLink = getLink.substring(0, a);
       }
+      var createLink =
+        "https://www.youtube.com/embed/" +
+        getLink +
+        "?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3";
+      var iframe = document.getElementById("iframe");
+      iframe.src = createLink;
+      document.title = "Playing video";
+    }
 
-      function createIframe() {
-        var iframe = document.createElement("iframe");
-        var goBack = document.getElementById("back");
-        goBack.parentNode.insertBefore(iframe, goBack);
-        iframe.style.zIndex = "20";
-        iframe.style.display = "block";
-        iframe.setAttribute("id", "iframe");
-        iframe.classList.add("center");
-        goBack.style.zIndex = "30";
-      }
+    function focusIF() {
+      document.getElementById("iframe").focus();
+      // document.getElementById("iframe").contentWindow.focus(); does not work
+    }
 
-      function loadVideo() {
-        var getLink = document.getElementById("urlLink").value.substring(32);
-        var a = getLink.indexOf("&");
-        if (a > 1) {
-          getLink = getLink.substring(0, a);
-        }
-        var createLink =
-          "https://www.youtube.com/embed/" +
-          getLink +
-          "?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3";
-        var iframe = document.getElementById("iframe");
-        iframe.src = createLink;
-        document.title = "Playing video";
-      }
+    function main() {
+      createIframe();
+      sleep(100).then(() => {
+        loadVideo();
+      });
+      sleep(250).then(() => {
+        focusIF();
+      });
+    }
+  </script>
+</body>
 
-      function focusIF() {
-        document.getElementById("iframe").focus();
-      }
-
-      function main() {
-        createIframe();
-        sleep(100).then(() => {
-          loadVideo();
-        });
-        sleep(250).then(() => {
-          focusIF();
-        });
-      }
-    </script>
-  </body>
 </html>
