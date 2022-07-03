@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Webs/static/css/main.91166c7b.css",
+    "main.js": "/Webs/static/js/main.704f4d8d.js",
+    "static/js/787.7bdeec02.chunk.js": "/Webs/static/js/787.7bdeec02.chunk.js",
+    "static/media/passwordGen.png": "/Webs/static/media/passwordGen.405650665fc46e254a51.png",
+    "static/media/quizgame.png": "/Webs/static/media/quizgame.6406ec6d091417f561ff.png",
+    "static/media/huffman.png": "/Webs/static/media/huffman.9730bfe76ba5efe34ef5.png",
+    "static/media/SHA-1.png": "/Webs/static/media/SHA-1.3a003f2f0b4e66b6e7ca.png",
+    "static/media/folder-organizer.png": "/Webs/static/media/folder-organizer.5d729f80587a88616c28.png",
+    "static/media/sort.png": "/Webs/static/media/sort.58cd4606a7497f914b3c.png",
+    "index.html": "/Webs/index.html",
+    "main.91166c7b.css.map": "/Webs/static/css/main.91166c7b.css.map",
+    "main.704f4d8d.js.map": "/Webs/static/js/main.704f4d8d.js.map",
+    "787.7bdeec02.chunk.js.map": "/Webs/static/js/787.7bdeec02.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91166c7b.css",
+    "static/js/main.704f4d8d.js"
+  ]
+}
