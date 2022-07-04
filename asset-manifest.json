@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Webs/static/css/main.91166c7b.css",
-    "main.js": "/Webs/static/js/main.16eb7dcb.js",
+    "main.css": "/Webs/static/css/main.c31eca00.css",
+    "main.js": "/Webs/static/js/main.de0021f9.js",
     "static/js/787.7bdeec02.chunk.js": "/Webs/static/js/787.7bdeec02.chunk.js",
     "static/media/passwordGen.png": "/Webs/static/media/passwordGen.405650665fc46e254a51.png",
     "static/media/quizgame.png": "/Webs/static/media/quizgame.6406ec6d091417f561ff.png",
@@ -10,12 +10,12 @@
     "static/media/folder-organizer.png": "/Webs/static/media/folder-organizer.5d729f80587a88616c28.png",
     "static/media/sort.png": "/Webs/static/media/sort.58cd4606a7497f914b3c.png",
     "index.html": "/Webs/index.html",
-    "main.91166c7b.css.map": "/Webs/static/css/main.91166c7b.css.map",
-    "main.16eb7dcb.js.map": "/Webs/static/js/main.16eb7dcb.js.map",
+    "main.c31eca00.css.map": "/Webs/static/css/main.c31eca00.css.map",
+    "main.de0021f9.js.map": "/Webs/static/js/main.de0021f9.js.map",
     "787.7bdeec02.chunk.js.map": "/Webs/static/js/787.7bdeec02.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91166c7b.css",
-    "static/js/main.16eb7dcb.js"
+    "static/css/main.c31eca00.css",
+    "static/js/main.de0021f9.js"
   ]
 }
