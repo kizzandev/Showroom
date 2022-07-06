@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Webs/static/css/main.c31eca00.css",
-    "main.js": "/Webs/static/js/main.00e028c8.js",
-    "static/js/787.7bdeec02.chunk.js": "/Webs/static/js/787.7bdeec02.chunk.js",
-    "static/media/passwordGen.png": "/Webs/static/media/passwordGen.405650665fc46e254a51.png",
-    "static/media/quizgame.png": "/Webs/static/media/quizgame.6406ec6d091417f561ff.png",
-    "static/media/huffman.png": "/Webs/static/media/huffman.9730bfe76ba5efe34ef5.png",
-    "static/media/SHA-1.png": "/Webs/static/media/SHA-1.3a003f2f0b4e66b6e7ca.png",
-    "static/media/folder-organizer.png": "/Webs/static/media/folder-organizer.5d729f80587a88616c28.png",
-    "static/media/sort.png": "/Webs/static/media/sort.58cd4606a7497f914b3c.png",
-    "static/media/snakeGame.png": "/Webs/static/media/snakeGame.868bfcae4e7b683fb928.png",
-    "index.html": "/Webs/index.html",
-    "main.c31eca00.css.map": "/Webs/static/css/main.c31eca00.css.map",
-    "main.00e028c8.js.map": "/Webs/static/js/main.00e028c8.js.map",
-    "787.7bdeec02.chunk.js.map": "/Webs/static/js/787.7bdeec02.chunk.js.map"
+    "main.css": "/Showroom/static/css/main.cc41d183.css",
+    "main.js": "/Showroom/static/js/main.10572e8b.js",
+    "static/js/787.7bdeec02.chunk.js": "/Showroom/static/js/787.7bdeec02.chunk.js",
+    "static/media/passwordGen.png": "/Showroom/static/media/passwordGen.405650665fc46e254a51.png",
+    "static/media/quizgame.png": "/Showroom/static/media/quizgame.6406ec6d091417f561ff.png",
+    "static/media/huffman.png": "/Showroom/static/media/huffman.9730bfe76ba5efe34ef5.png",
+    "static/media/SHA-1.png": "/Showroom/static/media/SHA-1.3a003f2f0b4e66b6e7ca.png",
+    "static/media/folder-organizer.png": "/Showroom/static/media/folder-organizer.5d729f80587a88616c28.png",
+    "static/media/sort.png": "/Showroom/static/media/sort.58cd4606a7497f914b3c.png",
+    "static/media/snakeGame.png": "/Showroom/static/media/snakeGame.868bfcae4e7b683fb928.png",
+    "index.html": "/Showroom/index.html",
+    "main.cc41d183.css.map": "/Showroom/static/css/main.cc41d183.css.map",
+    "main.10572e8b.js.map": "/Showroom/static/js/main.10572e8b.js.map",
+    "787.7bdeec02.chunk.js.map": "/Showroom/static/js/787.7bdeec02.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c31eca00.css",
-    "static/js/main.00e028c8.js"
+    "static/css/main.cc41d183.css",
+    "static/js/main.10572e8b.js"
   ]
 }
